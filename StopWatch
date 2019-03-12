@@ -1,0 +1,303 @@
+
+<!Doctype HTML>
+<html>
+<head> 
+<title>STOPWATCH</title>
+    <style>
+      .display {
+      position: relative;
+      }
+      .segment {
+      height: 125px;
+      width: 15px;
+      background-color: red;
+      border-radius: 9999px;
+      box-shadow: 0px 0px 25px #990000;
+      }
+      .A {
+      position: absolute;
+      top: -45px;
+      left: 290px;
+      transform: rotate(90deg);
+      }
+      .B {
+      position: absolute;
+      top: 20px;
+      left: 360px;
+      }
+      .C {
+      position: absolute;
+      top: 150px;
+      left: 360px;
+      }
+      .D {
+      position: absolute;
+      top: 215px;
+      left: 290px;
+      transform: rotate(90deg);
+      }
+      .E {
+      position: absolute;
+      top: 150px;
+      left: 220px;
+      }
+      .F {
+      position: absolute;
+      top: 20px;
+      left: 220px;
+      }
+      .G {
+      position: absolute;
+      top: 85px;
+      left: 290px;
+      transform: rotate(90deg);
+      }
+	  .H {
+      position: absolute;
+      top: -45px;
+      left: 90px;
+      transform: rotate(90deg);
+      }
+      .I {
+      position: absolute;
+      top: 20px;
+      left: 160px;
+      }
+      .J {
+      position: absolute;
+      top: 150px;
+      left: 160px;
+      }
+      .K {
+      position: absolute;
+      top: 215px;
+      left: 90px;
+      transform: rotate(90deg);
+      }
+      .L {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      }
+      .M {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      }
+      .N {
+      position: absolute;
+      top: 85px;
+      left: 90px;
+      transform: rotate(90deg);
+      }
+	input{
+		margin-top:300px;
+	}
+    </style>
+<!--<link rel="stylesheet" type="text/css" href="exam_css.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+		var l;
+		var i=0,j=0;
+		var count=0;
+		function start(){
+		l=setInterval(segment,1000);
+		}
+		function STOP(){
+			clearInterval(l);
+			$(document).ready(function() {
+				$(".segment").css({"background-color":"red","box-shadow": "0px 0px 25px #990000"});
+			});
+		}
+		function RESTART(){
+			l=setInterval(segment,1000);
+		}
+		function segment()
+        {		  
+		  
+		  i=count%10; j=(count/10)-(count%10);
+		  $(document).ready(function() {
+		  $("#A1").css({"visibility":"visible"});
+		  $("#B1").css({"visibility":"visible"});
+		  $("#C1").css({"visibility":"visible"});
+		  $("#D1").css({"visibility":"visible"});
+		  $("#E1").css({"visibility":"visible"});
+		  $("#F1").css({"visibility":"visible"});
+		  $("#G1").css({"visibility":"visible"});
+		  $(".segment").css({"background-color":"green","box-shadow": "0px 0px 25px #009900"});
+		  second();
+		  switch(i)
+		  {
+			case 0:
+				$("#G1").css({"visibility":"hidden"});
+			break;
+			case 1:
+				$("#A1").css({"visibility":"hidden"});
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+				$("#G1").css({"visibility":"hidden"});
+				break;
+			case 2:
+			  	$("#C1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+			  	break;
+			case 3:
+				$("#E1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+			  	break;
+			case 4:
+			  	$("#A1").css({"visibility":"hidden"});
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+			  	break;
+			case 5:
+			  	$("#E1").css({"visibility":"hidden"});
+				$("#B1").css({"visibility":"hidden"});
+			  	break;
+			case 6:
+			  	$("#B1").css({"visibility":"hidden"});
+			  	break;
+			case 7:
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+				$("#G1").css({"visibility":"hidden"});
+			  	break;
+			case 8:
+			  	break;
+			case 9:
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+			  	break;
+		  }
+		  if(count==99){clearInterval(l);} else count++;	
+			});
+		}
+
+function second(){
+
+switch(j)
+		  {
+			case 0:
+				$("#H1").css({"visibility":"hidden"});
+				$("#I1").css({"visibility":"hidden"});
+				$("#J1").css({"visibility":"hidden"});
+				$("#K1").css({"visibility":"hidden"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"hidden"});
+				$("#N1").css({"visibility":"hidden"});
+			break;
+			case 1:
+				$("#H1").css({"visibility":"hidden"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"hidden"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"hidden"});
+				$("#N1").css({"visibility":"hidden"});
+				break;
+			case 2:
+			  	$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"hidden"});
+				$("#K1").css({"visibility":"visible"});
+				$("#L1").css({"visibility":"visible"});
+				$("#M1").css({"visibility":"hidden"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+			case 3:
+				$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"visible"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"hidden"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+			case 4:
+			  	$("#H1").css({"visibility":"hidden"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"hidden"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"visible"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+			case 5:
+			  	$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"hidden"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"visible"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"visible"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+			case 6:
+			  	$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"hidden"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"visible"});
+				$("#L1").css({"visibility":"visible"});
+				$("#M1").css({"visibility":"visible"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+			case 7:
+				$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"hidden"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"hidden"});
+				$("#N1").css({"visibility":"hidden"});
+			  	break;
+			case 8:
+				$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"visible"});
+				$("#L1").css({"visibility":"visible"});
+				$("#M1").css({"visibility":"visible"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+			case 9:
+				$("#H1").css({"visibility":"visible"});
+				$("#I1").css({"visibility":"visible"});
+				$("#J1").css({"visibility":"visible"});
+				$("#K1").css({"visibility":"hidden"});
+				$("#L1").css({"visibility":"hidden"});
+				$("#M1").css({"visibility":"visible"});
+				$("#N1").css({"visibility":"visible"});
+			  	break;
+		  }
+		}
+
+
+function RESET(){
+		  location.reload();
+}
+</script>
+</head>
+<body style="background-color:black; display:block; border: 2px;">
+<div class="display">
+	  <div class="segment H" id="H1"></div>
+	  <div class="segment I" id="I1"></div>
+	  <div class="segment J" id="J1"></div>
+	  <div class="segment K" id="K1"></div>
+	  <div class="segment L" id="L1"></div>
+	  <div class="segment M" id="M1"></div>
+	  <div class="segment N" id="N1"></div>
+	  <div class="segment A" id="A1"></div>
+	  <div class="segment B" id="B1"></div>
+	  <div class="segment C" id="C1"></div>
+	  <div class="segment D" id="D1"></div>
+	  <div class="segment E" id="E1"></div>
+	  <div class="segment F" id="F1"></div>
+	  <div class="segment G" id="G1"></div>
+</div>
+<input type="button" onclick="start()" value="Start" style="cursor:pointer">  </input>
+<input type="button" onclick="STOP()" value="Stop" style="cursor:pointer">  </input>
+<input type="button" onclick="RESTART()" value="Restart" style="cursor:pointer">  </input>
+<input type="button" onclick="RESET()" value="Reset" style="cursor:pointer">  </input>
+</body>
+</html>
