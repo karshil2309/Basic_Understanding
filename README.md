@@ -1,1 +1,1 @@
-# HTML, Css, JAVASCRIPT, JQUERY Programs #
+# HTML, CSS, JAVASCRIPT, JQUERY Programs #
