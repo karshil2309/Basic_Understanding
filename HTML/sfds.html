@@ -1,0 +1,140 @@
+ <html>
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      body {
+      background-color: black;
+      display: block;
+      }
+      .display {
+      position: relative;
+      }
+      .segment {
+      height: 125px;
+      width: 15px;
+      background-color: #990000;
+      border-radius: 9999px;
+      box-shadow: 0px 0px 25px #990000;
+      }
+      .A {
+      position: absolute;
+      top: -45px;
+      left: 90px;
+      transform: rotate(90deg);
+      }
+      .B {
+      position: absolute;
+      top: 20px;
+      left: 160px;
+      }
+      .C {
+      position: absolute;
+      top: 150px;
+      left: 160px;
+      }
+      .D {
+      position: absolute;
+      top: 215px;
+      left: 90px;
+      transform: rotate(90deg);
+      }
+      .E {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      }
+      .F {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      }
+      .G {
+      position: absolute;
+      top: 85px;
+      left: 90px;
+      transform: rotate(90deg);
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="display">
+      <div class="segment A" id="A1">a</div>
+      <div class="segment B" id="B1">b</div>
+      <div class="segment C" id="C1">c</div>
+      <div class="segment D" id="D1">d</div>
+      <div class="segment E" id="E1">e</div>
+      <div class="segment F" id="F1">f</div>
+      <div class="segment G" id="G1">g</div>
+    </div>
+    <script>
+        var i=0;
+	  setInterval(abc,1000);
+     
+      function abc()
+        {
+      $(document).ready(function() {
+		  $("#A1").css({"visibility":"visible"});
+		  $("#B1").css({"visibility":"visible"});
+		  $("#C1").css({"visibility":"visible"});
+		  $("#D1").css({"visibility":"visible"});
+		  $("#E1").css({"visibility":"visible"});
+		  $("#F1").css({"visibility":"visible"});
+          $("#G1").css({"visibility":"visible"});
+		  
+		  switch(i)
+		  {
+			  case 0:
+			  	$("#G1").css({"visibility":"hidden"});
+				break;
+			  case 1:
+			  	$("#A1").css({"visibility":"hidden"});
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+				$("#G1").css({"visibility":"hidden"});
+			  	break;
+			  case 2:
+			  	$("#C1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+			  	break;
+			  case 3:
+				$("#E1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+			  	break;
+			  case 4:
+			  	$("#A1").css({"visibility":"hidden"});
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+			  	break;
+			  case 5:
+			  	$("#E1").css({"visibility":"hidden"});
+				$("#B1").css({"visibility":"hidden"});
+			  	break;
+			  case 6:
+			  	$("#B1").css({"visibility":"hidden"});
+			  	break;
+			  case 7:
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+				$("#F1").css({"visibility":"hidden"});
+				$("#G1").css({"visibility":"hidden"});
+			  	break;
+			  case 8:
+			  	break;
+			  case 9:
+				$("#D1").css({"visibility":"hidden"});
+				$("#E1").css({"visibility":"hidden"});
+			  	break;
+		  }
+		  i++;
+      
+        if(i>9)
+          i=0;
+		  
+    });
+            
+        }
+    </script>
+  </body>
+</html>

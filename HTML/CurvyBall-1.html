@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+#block{
+	transform: rotateY(360deg);
+}
+</style>
+    <script>
+            var setinterval = setInterval("rotate()", 2);
+            var cntL = 0;
+            var cntT = 0;
+            var incL = 1;
+            var incT = 1;
+            var move =1;
+           
+            function rotate(){
+                
+                if(move==1)
+                {
+                document.getElementById("ball").style.left = cntL + "px";
+                document.getElementById("ball").style.top = cntT+ "px" ;
+                cntT = cntT+incT;
+                cntL = cntL+incL;
+                if(cntL<0){
+                    
+                    incL=1;
+                    incT=1;
+                }
+                if(cntL>=450)
+                {
+                    move=2;
+                }
+                }
+                if(move==2)
+                {
+                    document.getElementById("ball").style.left = cntL + "px";
+                    document.getElementById("ball").style.top = cntT+ "px" ;
+                    cntL = cntL+incL;
+                    cntT = cntT+incT;
+                if(cntT>=450){
+                                incT=-1;
+                                incL=1;
+                             }
+                    if(cntT<0)
+                  {
+                  move=3;
+                    }
+                }
+                if(move==3)
+                {
+                    document.getElementById("ball").style.left = cntL + "px";
+                    document.getElementById("ball").style.top = cntT+ "px" ;
+                    cntL = cntL+incL;
+                    cntT = cntT+incT;
+                if(cntL>=900){
+                                incT=1;
+                                incL=1;
+                             }
+                    if(cntT>=450)
+                  {
+                  move=4;
+                    }
+                }
+                 if(move==4)
+                {
+                    document.getElementById("ball").style.left = cntL + "px";
+                    document.getElementById("ball").style.top = cntT+ "px" ;
+                    cntL = cntL+incL;
+                    cntT = cntT+incT;
+                if(cntL>=1450){
+                                incT=-1;
+                                incL=1;
+                             }
+                    
+        
+                        
+                    if(cntT>=450)
+                  {
+                  move=5;
+                    }
+            }
+            };
+                    
+             </script>
+	</head>
+
+	<body onload = "rotate()">
+        <div class = "block" style="width:1500px; height:500px;background-color: red;">
+            <div id="ball" style="width:50px;height:50px; background-color: black; border-radius:50%; position:relative;">
+            </div>
+        </div>
+		
+        
+	</body>
+</html>

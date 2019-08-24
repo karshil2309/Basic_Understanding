@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Ball task 2</title>
+	<style>
+		body, div
+		{
+			margin: 0;
+			padding: 0;
+			position: absolute;
+		}
+		#cir
+		{
+			width: 50px;
+			height: 50px; 
+			position: absolute;
+			background-color: indianred;
+			border-radius: 50%;
+			bottom: 50px;
+			right: 50px;
+		}
+	</style>
+</head>
+<body>
+<div style="width: auto; height: auto; background-color: #FF0; position: absolute;">
+<div id="cir"></div>
+</div>
+<script type="text/javascript">
+	var cirL=0;
+	var cirT=0;
+	var moveL=1;
+	var moveT=1;
+	setInterval("rotate()",1);
+	function rotate()
+		{
+        //        $(cir).stop(stopAll,goToEnd);{(
+            
+            document.getElementById('cir').style.left = cirL + "px";
+			document.getElementById('cir').style.bottom = cirT + "px";
+			cirL=cirL+moveL;
+			cirT=cirT+moveT;
+            if( cirL<0 || cirL>window.innerWidth)
+            {
+                moveL=-moveL;
+            }
+            if( cirT<0 || cirT>window.innerHeight)
+            {
+                moveT=-moveT;
+            }
+			if(window.innerHeight<"500px" || window.innerWidth<"500px")
+			{
+				window.alert("Please increase the Size of the window");
+			}
+          //                                      )};
+        //    $(rotate).stop(stopAll,goToEnd);
+		}
+	
+</script>
+
+</body>
+</html>

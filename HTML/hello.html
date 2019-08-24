@@ -1,0 +1,62 @@
+<html>
+<head>
+	<style type="text/css">
+		#two{
+			background-color: green;
+			top:60px;
+			left:100px;
+			height: 200px;
+			width: 400px;
+			position: fixed;
+		}
+		#one{
+			background-color: red;
+			top:120px;
+			left:200px;
+			height: 100px;
+			width: 200px;
+			color: white;
+			position: fixed;
+		}
+		#three{
+			background-color: blue;
+			height: 300px;
+			width:600px;
+
+			position: fixed;
+		}
+	</style>
+	<script type="text/javascript">
+		var setinterval = setInterval("c()", 500);
+		var count=1;
+		function c()
+		{		
+			if(count%4==1){document.getElementById("one").style.backgroundColor="red";}
+			else if(count%4==2){document.getElementById("one").style.backgroundColor="blue";}
+			else if(count%4==3){document.getElementById("one").style.backgroundColor="green";}
+			else if(count%4==0){document.getElementById("one").style.backgroundColor="white";}
+
+			if(count%4==2){document.getElementById("two").style.backgroundColor="red";}
+			else if(count%4==0){document.getElementById("two").style.backgroundColor="blue";}
+			else if(count%4==1){document.getElementById("two").style.backgroundColor="green";}
+			else if(count%4==3){document.getElementById("two").style.backgroundColor="white";}
+
+			if(count%4==3){document.getElementById("three").style.backgroundColor="red";}
+			else if(count%4==1){document.getElementById("three").style.backgroundColor="blue";}
+			else if(count%4==2){document.getElementById("three").style.backgroundColor="green";}
+			else if(count%4==0){document.getElementById("three").style.backgroundColor="white";}
+			
+			count=count+1;
+		}
+	</script>
+</head>
+<body onload="c()">
+	<div3 id=three>
+		<div2 id=two>
+			<div1 id=one>
+				<center><h1>HELLO</h1></center>
+			</div1>
+		</div2>
+	</div3>
+</body>
+</html>

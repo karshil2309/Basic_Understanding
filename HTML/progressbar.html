@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation %2</title>
+	<style type="text/css">
+		body
+		{
+			padding-top: 149px;
+		}
+		#d1
+		{
+			text-align: center;
+			vertical-align: center;
+			margin:auto;
+			height: 400px;
+			width: 700px;
+			border:2px solid black;
+		}
+		#d2
+		{
+			border: 1px solid black;
+			width: 698px;
+			height: 30px;
+			margin-top: 170px;
+			background-color: #ccc;
+		}
+		#d3
+		{
+			background-color: green;
+			width: 0px;
+			height: 100%;
+		}
+	</style>
+	
+</head>
+<body>
+<div id="d1">
+	<p>Processing : <span id="span1">blah</span> </p>
+	<div id="d2">
+		
+		<div id="d3">
+			
+		</div>
+	</div>
+	<span id="span2" style="position: relative;bottom: 28px;">Starting..</span>
+</div>
+<script type="text/javascript">
+		var x = document.getElementById("d3");
+		var wid = 1;
+		var y=document.getElementById("span1");
+		var z=document.getElementById("span2");
+		var a = setInterval(move,100);
+		alert("Progress Start.");
+		function move()
+		{
+			if(wid>100)
+			{
+				clearInterval(a);
+				document.getElementById("d3").style.backgroundColor="blue";
+				alert("Your Process Has Successfully Completed");
+			}
+			else
+			{
+				x.style.width = wid + "%";
+				y.innerHTML= wid + "%";
+				z.innerHTML= wid + "%";
+				wid++;
+			}
+		}
+    
+	</script>
+</body>
+</html>

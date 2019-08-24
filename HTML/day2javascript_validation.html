@@ -1,0 +1,135 @@
+<html>
+<head>
+    <script>
+    function validate()
+        {
+            var divs=new Array();
+            
+            divs[0]="errf";
+            
+            divs[1]="errl";
+            divs[2]="erre";
+            divs[3]="errp";
+            divs[4]="errc";
+            
+            var inputs=new Array();
+            
+            inputs[0]=document.getElementById('first').value;
+    
+            inputs[1]=document.getElementById('last').value;
+        
+            inputs[2]=document.getElementById('email').value;
+        
+            inputs[3]=document.getElementById('pass').value;
+        
+            inputs[4]=document.getElementById('confirm').value;
+        
+            var errors=new Array();
+            
+            errors[0]="<span style= 'color:red'>Please enter ur first name!</span>";
+            
+            
+            errors[1]="<span style= 'color:red'>Please enter ur last name!</span>";
+            
+            
+            errors[2]="<span style= 'color:red'>Please enter ur email name!</span>";
+            
+            
+            errors[3]="<span style= 'color:red'>Please enter ur password!</span>";
+            
+            
+            errors[4]="<span style= 'color:red'>Please enter ur confirm password!</span>";
+        
+            for(i in inputs)
+                {
+                    var errMessage = errors[i];
+                    
+                    var div = divs[i];
+                    
+                    if(inputs[i] == "")
+                        document.getElementById(div).innerHTML=errMessage;
+
+                    else if(i==4)
+                        {
+                            
+                            var first=document.getElementById('pass').value;
+                            
+                            var second=document.getElementById('confirm').value;
+                            
+                            if(second !=first)
+                                
+                                document.getElementById('errc').innerHTML="<span style='color:red'>your password dosent match!</span>";
+                            
+                        
+                        else
+                        document.getElementById(div).innerHTML="OK!";
+                                                        
+
+                        }
+                        else
+                        document.getElementById(div).innerHTML="OK!";
+            
+                }
+            
+        }
+        
+    </script>
+    
+    </head>
+    
+    <body>
+    <form>
+<table>
+    <tr>
+        <td>
+                <label>First Name:</label></td>
+        <td>
+                <input type="text" id="first" onKeyUp="validate();" /></td>
+        <td>
+        <div id="errf"></div>
+        </td>
+        <br><br></tr>
+        <tr>
+        <td>       <label>Last Name:</label></td>
+        <td>
+            <input   type="text" id="last" onkeyup="validate();" /><br><br></td>
+    <td>
+            <div id="errl"></div>
+            </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Email:</label></td>
+        <td>
+
+            <input   type="email" id="email" onKeyup="validate();" /><br><br></td>
+    <td>
+        <div id="erre"></div>
+        </td></tr>
+<tr>
+    <td>
+        
+        <label>password</label></td><td>
+            
+        <input  type="password" id="pass" onkeyup="validate();" /><br><br></td>
+  <td>
+    <div id="errp"></div></td>
+    </tr>
+<tr> 
+    <td>
+        <label>confirm password</label></td>
+<td>
+        <input  type="password" id="confirm" onkeyup="validate();" /><br><br></td>
+<td>
+    <div id="errc">
+    </div></td>
+    </tr>      
+<tr>
+    <td>
+        <button>create</button></td>
+        
+</tr>
+        </table>       
+    </body>
+    
+</html>

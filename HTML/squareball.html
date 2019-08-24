@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html>
+	<head>
+
+        <script>
+            var setinterval = setInterval("rotate()", 5);
+            var cntL = 0;
+            var cntT = 0;
+            var incL = 1;
+            var incT = 1;
+            var move =1;
+           
+            function rotate(){
+                
+                if(move==1)
+                {
+                    document.getElementById("ball").style.backgroundColor="yellow";
+                    document.getElementById("ball").style.left = cntL + "px";
+                //document.getElementById("ball").style.top = cntT+ "px" ;
+                
+                cntL = cntL+incL;
+                if(cntL<0){
+                    
+                    incL=1;
+                }
+                if(cntL>=450)
+                {
+                    move=2;
+                }
+                }
+                if(move==2)
+                {
+                    document.getElementById("ball").style.backgroundColor="blue";
+                    //document.getElementById("ball").style.left = cntL + "px";
+                    document.getElementById("ball").style.top = cntT+ "px" ;
+                    
+                    
+                    cntT = cntT+incT;
+                    if(cntL<0){
+                    
+                    incT=1;
+                    }
+                    if(cntT>=450)
+                    {
+                    move=3;
+                    }
+
+                }
+                if(move==3)
+                {
+                    document.getElementById("ball").style.backgroundColor="green";
+                document.getElementById("ball").style.left = cntL + "px";
+                //document.getElementById("ball").style.top = cntT+ "px" ;
+                
+                cntL = cntL-incL;
+                if(cntL<0){
+                    
+                    incL=1;
+                }
+                if(cntL<00)
+                {
+                    move=4;
+                }
+                }
+                if(move==4)
+                {
+                    document.getElementById("ball").style.backgroundColor = "black";
+                    document.getElementById("ball").style.top = cntT+ "px" ;
+                
+                    cntT = cntT-incT;
+                    if(cntL<0){
+                    
+                    incT=1;
+                    }
+                    if(cntT<00)
+                    {
+                    move=1;
+                    }
+
+                }
+
+              
+
+
+                
+            }
+        </script>
+	</head>
+
+	<body onload = "rotate()">
+        <div style="width:500px; height:500px;background-color: red;">
+            <div id="ball" style="width:50px;height:50px; background-color: black; border-radius:50%; position:relative;">
+            </div>
+        </div>
+        
+	</body>
+</html>

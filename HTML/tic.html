@@ -1,0 +1,244 @@
+<html>
+<head>
+<script>
+
+	var move1=0;var move2=0;var move3=0;var move4=0;var move5=0;var move6=0;var move7=0;var move8=0;var move9=0;
+	var movep1=0;var movep2=0;var movep3=0;var movep4=0;var movep5=0;var movep6=0;var movep7=0;var movep8=0;var movep9=0;
+	var click1=0;var click2=0;var click3=0;var click4=0;var click5=0;var click6=0;var click7=0;var click8=0;var click9=0;
+	var win=0;var player=2;
+	function one()
+	{
+		if(click1==0)
+		{
+			if(player%2==0)
+			{
+			move1=1;
+			document.getElementById('t1').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep1=1;
+				document.getElementById('t1').value=2;
+				player=player+1;
+			}
+			click1=1;
+		}wins();}
+	function two()
+	{
+		if(click2==0)
+		{
+			if(player%2==0)
+			{
+			move2=1;
+			document.getElementById('t2').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep2=1;
+				document.getElementById('t2').value=2;
+				player=player+1;
+			}
+			click2=1;
+		}wins();}
+	function three()
+	{
+		if(click3==0)
+		{
+			if(player%2==0)
+			{
+			move3=1;
+			document.getElementById('t3').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep3=1;
+				document.getElementById('t3').value=2;
+				player=player+1;
+			}
+			click3=1;
+		}wins();}
+	function four()
+	{
+		if(click4==0)
+		{
+			if(player%2==0)
+			{
+			move4=1;
+			document.getElementById('t4').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep4=1;
+				document.getElementById('t4').value=2;
+				player=player+1;
+			}
+			click4=1;
+		}wins();}
+	function five()
+	{
+		if(click5==0)
+		{
+			if(player%2==0)
+			{
+			move5=1;
+			document.getElementById('t5').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep5=1;
+				document.getElementById('t5').value=2;
+				player=player+1;
+			}
+			click5=1;
+		}wins();}
+	function six()
+	{
+		if(click6==0)
+		{
+			if(player%2==0)
+			{
+			move6=1;
+			document.getElementById('t6').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep6=1;
+				document.getElementById('t6').value=2;
+				player=player+1;
+			}
+			click6=1;
+		}wins();}
+	function seven()
+	{
+		if(click7==0)
+		{
+			if(player%2==0)
+			{
+			move7=1;
+			document.getElementById('t7').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep7=1;
+				document.getElementById('t7').value=2;
+				player=player+1;
+			}
+			click7=1;
+		}wins();}
+	function eight()
+	{
+		if(click8==0)
+		{
+			if(player%2==0)
+			{
+			move8=1;
+			document.getElementById('t8').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep8=1;
+				document.getElementById('t8').value=2;
+				player=player+1;
+			}
+			click8=1;
+		}wins();}
+	function nine()
+	{
+		if(click9==0)
+		{
+			if(player%2==0)
+			{
+			move9=1;
+			document.getElementById('t9').value=1;
+			player=player+1;
+			}
+			else
+			{
+				movep9=1;
+				document.getElementById('t9').value=2;
+				player=player+1;
+			}
+			click9=1;
+		}wins();}
+	function wins()
+	{
+	
+		if(move1==1&&move2==1&&move3==1){win=1;}
+		if(move4==1&&move5==1&&move6==1){win=1;}
+		if(move7==1&&move8==1&&move9==1){win=1;}
+		if(move1==1&&move4==1&&move7==1){win=1;}
+		if(move2==1&&move5==1&&move8==1){win=1;}
+		if(move3==1&&move6==1&&move9==1){win=1;}
+		if(move1==1&&move5==1&&move9==1){win=1;}
+		if(move3==1&&move5==1&&move7==1){win=1;}
+		
+		if(movep1==1&&movep2==1&&movep3==1){win=2;}
+		if(movep4==1&&movep5==1&&movep6==1){win=2;}
+		if(movep7==1&&movep8==1&&movep9==1){win=2;}
+		if(movep1==1&&movep4==1&&movep7==1){win=2;}
+		if(movep2==1&&movep5==1&&movep8==1){win=2;}
+		if(movep3==1&&movep6==1&&movep9==1){win=2;}
+		if(movep1==1&&movep5==1&&movep9==1){win=2;}
+		if(movep3==1&&movep5==1&&movep7==1){win=2;}
+
+		if(player%2==0){document.getElementById('turn').value="Player 1";}
+		else{document.getElementById('turn').value="Player 2";}
+		
+		if(win==1){alert("Player one wins!!");reset();}
+		else if(win==2){alert("Player two wins!!");reset();}
+		else if(click1==1&&click2==1&&click3==1&&click4==1&&click5==1&&click6==1&&click7==1&&click8==1&&click9==1)
+			{alert("No One wins DRAW!!");reset();}}
+	function reset()
+	{
+		document.getElementById('t1').value=0;click1=0;
+		document.getElementById('t2').value=0;click2=0;
+		document.getElementById('t3').value=0;click3=0;
+		document.getElementById('t4').value=0;click4=0;
+		document.getElementById('t5').value=0;click5=0;
+		document.getElementById('t6').value=0;click6=0;
+		document.getElementById('t7').value=0;click7=0;
+		document.getElementById('t8').value=0;click8=0;
+		document.getElementById('t9').value=0;click9=0;
+		move1=0;move2=0;move3=0;move4=0;move5=0;move6=0;move7=0;move8=0;move9=0;
+		movep1=0;movep2=0;movep3=0;movep4=0;movep5=0;movep6=0;movep7=0;movep8=0;movep9=0;
+		player=2;
+		win=0;}
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><input type="button" onclick="one()" id=t1  value="0"/> </td>
+			<td><input type="button" onclick="two()"  id=t2 value="0"/> </td>
+			<td><input type="button" onclick="three()" id=t3 value="0"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="four()" id=t4  value="0"/> </td>
+			<td><input type="button" onclick="five()"  id=t5 value="0"/> </td>
+			<td><input type="button" onclick="six()" id=t6 value="0"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="seven()" id=t7  value="0"/> </td>
+			<td><input type="button" onclick="eight()"  id=t8 value="0"/> </td>
+			<td><input type="button" onclick="nine()" id=t9 value="0"/> </td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td colspan="1"><input type="button"  id=turn value="  Player 1 "/> </td>
+		</tr>
+			<tr>
+			<td colspan="1"><input type="button" onclick="reset()" id=reset value="    Reset   "/> </td>
+		</tr>
+		
+	</table>
+</body>
+</html>

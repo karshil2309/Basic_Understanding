@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script>
+    function validate()
+        {
+            
+            var input=new Array();
+            
+            inputs[0]=document.getElementById('first').value;
+    
+            inputs[1]=document.getElementById('last').value;
+        
+            inputs[2]=document.getElementById('email').value;
+        
+            inputs[3]=document.getElementById('pass').value;
+        
+            inputs[4]=document.getElementById('confirm').value;
+        
+            
+        
+        }
+        
+    </script>
+    
+    </head>
+    
+    <body>
+    <form >
+<table>
+    <tr>
+        <td>
+                <label>First Name:</label></td>
+        <td>
+                <input   type="text" id="first" onkeyup="validate();" /></td><br><br></tr>
+    <tr>
+        <td>       <label>Last Name:</label></td>
+        <td>
+            <input   type="text" id="last" onkeyup="validate();" /><br><br></td></tr>
+    <tr>
+        <td>
+            <label>Email:</label></td>
+        <td>
+
+            <input   type="email" id="email" onKeyup="validate();" /><br><br></td></tr>
+<tr>
+    <td>
+        
+        <label>password</label></td><td>
+            
+        <input  type="password" id="pass" onkeyup="validate();" /><br><br></td>
+  </tr>
+<tr> 
+    <td>
+        <label>confirm password</label></td>
+<td>
+        <input  type="password" id="confirm" onkeyup="validate();" /><br><br></td>
+</tr>      
+<tr>
+    <td>
+        <button>create</button></td>
+        
+</tr>
+        </table>       
+    </body>
+    
+</html>

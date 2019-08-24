@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function fun1()
+{
+	if(document.f1.t2.value != document.f1.t1.value)
+	{
+		alert("the enter name and password is not same");
+	}
+	
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<label>password</label>
+<input  name="t1" type="password"  placeholder="enter password" /><br><br>
+<label>Username</label>
+<input  name="t2" type="text" placeholder="enter username" /><br><br>
+<input type="submit"  onclick="fun1()"/>	
+
+</form>
+</body>
+</html>

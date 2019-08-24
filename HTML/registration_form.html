@@ -1,0 +1,182 @@
+
+                                                                 PRACTICAL 6
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration form</title>
+
+	
+	<script type="text/javascript">
+
+		function a(){
+		var x=document.getElementById("fn").value;
+		if(x==""){
+			document.getElementById("x").innerHTML="<b>*Required or invalid</b>";
+			
+		}
+
+		
+		}
+			function b(){
+		var x=document.getElementById("mn").value;
+		if(x==""){
+			document.getElementById("y").innerHTML="<b>*Required or invalid</b>";
+			
+		}
+
+		
+		}
+	function c(){
+		var x=document.getElementById("ln").value;
+		if(x==""){
+			document.getElementById("z").innerHTML="<b>*Required or invalid</b>";
+			
+		}
+
+		
+		}
+		function e(){
+		var x=document.getElementById("Password").value;
+		if(x==""){
+			document.getElementById("p").innerHTML="<b>*Required or invalid</b>";
+			
+		}
+
+		
+		}
+		function d(){
+			var x=document.getElementById("CPassword").value;
+			var y=document.getElementById("Password").value;
+			if(x=="" || x!=y){
+				document.getElementById("w").innerHTML="<b>*Required or invalid</b>";
+			}
+
+		}
+function f(){
+			var x=document.getElementById("Mobile").value;
+			
+			if(x=="" || isNaN(x)){
+				document.getElementById("q").innerHTML="<b>*Required or invalid</b>";
+				return false;
+			}
+			if(x.length=10){
+			document.getElementById("q").innerHTML="<b>*Enter 10 numbers</b>";	
+			}
+
+		}
+		function g(){
+
+			var x=document.getElementById("Enrollment").value;
+			if(x==""){
+				document.getElementById("r").innerHTML="<b>*Required or invalid</b>";
+				return false;
+			}
+			if(x.length=12){
+			document.getElementById("r").innerHTML="<b>*Enter 12 characters</b>";
+			return false;
+			
+			}
+			if (x.charAt(0)!="I"){
+						document.getElementById("r").innerHTML="<b>Should start with I</b>";
+						return false;
+						
+			}
+					if (x.charAt(1)!="U"){
+						document.getElementById("r").innerHTML="<b>Second letter must be U</b>";
+						return false;
+			
+			}
+
+					
+
+		}
+		function h(){
+			 var x = document.getElementById("s").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+		}
+	}
+	
+
+
+
+
+
+
+	</script>
+	
+
+
+
+</head>
+<body align="center">
+
+
+<h1>Registration form</h1>
+<form method="post" name="myForm">
+
+<div>
+
+	First Name:<input type="text" name="fn" placeholder="First name" id="fn" onblur="a(this);"><span id="x" style="color:red;"></span>
+</div><br>
+
+<div>
+	Middle Name:<input type="text" name="mn" placeholder="Middle name" id="mn" onblur="b(this);"><span id="y" style="color:red;"></span>
+</div><br>
+<div>
+	Last Name:<input type="text" name="ln" placeholder="Last name" id="ln" onblur="c(this);"><span id="z" style="color:red;"></span>
+</div><br>
+<div>
+	Email ID:<input type="text" name="Email" placeholder="Email" id="Email" onblur="h(this);"><span id="s" style="color:red;"></span>
+</div><br>
+<div>
+	Password:<input type="Password" name="Password" id="Password" onblur="e(this);"><span id="p" style="color:red;"></span>
+</div><br>
+<div>
+	Confirm Password:<input type="Password" name="Password" id="CPassword" onblur="d(this);"><span id="w" style="color:red;"></span>
+</div><br>
+<div>
+	Gender:<input type="radio" name="Gender" value="male">Male
+<input type="radio" name="Gender" value="female">Female
+</div><br>
+<div>
+	Birthdate:<input type="date" name="bday">
+</div><br>
+<div>
+	Branch:
+<select name="Select your Branch">
+	<option value="CE">CE</option>
+	<option value="CS">CS</option>
+	<option value="IT">IT</option>
+	
+</select>
+</div><br>
+
+<div>
+	Mobile No.:<input type="number" name="Mobile" placeholder="Mobile number" id="Mobile" onblur="f(this);"><span id="q" style="color:red;"></span>
+</div><br>
+<div>
+	Enrollment No.:<input type="text" name="Enrollment" id="Enrollment" onblur="g(this);"><span id="r" style="color:red;"></span>
+</div><br>
+
+
+
+<div>
+	Languages known:<input type="checkbox" name="Languages" value="Hindi">Hindi
+<input type="checkbox" name="Languages" value="Gujarati">Gujarati
+<input type="checkbox" name="Languages" value="English">English
+
+	
+
+</div><br>
+
+<input type="Submit" name="Submit" onsubmit="a();" onsubmit="b();" onsubmit="c();" onsubmit="d();" onsubmit="e();" onsubmit="f();" onsubmit="g();">
+<input type="reset" name="reset">
+
+</form>
+</body>
+</html>

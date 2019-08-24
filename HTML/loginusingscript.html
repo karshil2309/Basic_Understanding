@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript">
+function fun1()
+{
+	document.f1.name.focus();
+}
+</script>
+</head>
+<body onload="fun1()">
+
+<form action="post" name="f1">
+<table border=3>
+<tr>
+<td>name</td>
+
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<td>email</td>
+<td><input type="email" name="email"></td>
+</tr>
+<tr>
+<td>Zip code</td>
+<td><input type="text" name="zip"></td></tr>
+<tr>
+<td>Country</td>
+<td colspan="2"><select>
+<option value="-1" selected>choose yours</option>
+<option value="1">Usa</option>
+<option value="2">UK</option>
+<option value="3">Uganda</option>
+</td>
+</select>
+</tr>
+<tr>
+<td colspan="3"><center><input type="submit"></center></td>
+</tr>	
+	
+
+</table>
+</body>
+</html>

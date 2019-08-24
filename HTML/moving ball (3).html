@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+	border-radius: 50%;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+a1{
+    top:250px;
+    height:5px;
+    width: 700px;
+    position: fixed;
+    background-color: black;
+}
+b1{
+    top:150px;
+    height:5px;
+    width: 700px;
+    position: fixed;
+    background-color: black;
+}
+c1{
+    top:350px;
+    height:5px;
+    width: 700px;
+    position: fixed;
+    background-color: black;
+}
+
+
+@keyframes example {
+	from{transform: scale(2);}
+	to{transform: scale(1);}
+    0%   {left:0px; top:200px;}
+    50%  {left:700px; top:200px;}
+    100% { left:0px; top:200px;}
+}
+</style>
+</head>
+<div></div>
+<a1></a1>;
+<b1></b1>;
+<c1></c1>;
+
+</body>
+</html>
+
